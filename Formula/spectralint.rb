@@ -1,25 +1,25 @@
 class Spectralint < Formula
   desc "Static analysis for AI agent instruction files"
   homepage "https://github.com/by-all-means/spectralint"
-  version "0.4.0"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/by-all-means/spectralint/releases/download/v0.4.0/spectralint-aarch64-apple-darwin.tar.xz"
-      sha256 "39371c4c739d4a4b0b38b571a96b55cc8aa8768602638f79df10b3747924c725"
+      url "https://github.com/by-all-means/spectralint/releases/download/v0.5.0/spectralint-aarch64-apple-darwin.tar.xz"
+      sha256 "6d88f9e163041ffee342baff15809d1b7219594ffe4e576bf99f434e667b941e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/by-all-means/spectralint/releases/download/v0.4.0/spectralint-x86_64-apple-darwin.tar.xz"
-      sha256 "b0d4d4bf866569aebbab7ef39a718eb1847d3c44894238b228e8524dd63d8ce5"
+      url "https://github.com/by-all-means/spectralint/releases/download/v0.5.0/spectralint-x86_64-apple-darwin.tar.xz"
+      sha256 "8aff6c7c1c0ec407d8c83244c150d60d9d3a5307d314cfdb16daf7b1893e8914"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/by-all-means/spectralint/releases/download/v0.4.0/spectralint-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e0d1e39102f31ab25f05447ee6bda7bfacff1806f6a152eb91fad077e664b17e"
+      url "https://github.com/by-all-means/spectralint/releases/download/v0.5.0/spectralint-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "000dcc82073be79c3465ee7bda037bb1e8c11d8e38de993e11704a9d40176806"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/by-all-means/spectralint/releases/download/v0.4.0/spectralint-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "7b8f1533ba4737ff644e35ab93fd263d61af1d20c1dd2176e471fefd430174d2"
+      url "https://github.com/by-all-means/spectralint/releases/download/v0.5.0/spectralint-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a839ca2307d44c14903df66b7e5dad1fe246f3625f1d293bafd4df3736d674a1"
     end
   end
   license "MIT"
