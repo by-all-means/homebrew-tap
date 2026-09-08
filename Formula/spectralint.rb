@@ -1,25 +1,25 @@
 class Spectralint < Formula
   desc "Static analysis for AI agent instruction files"
   homepage "https://github.com/by-all-means/spectralint"
-  version "0.5.0"
+  version "0.7.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/by-all-means/spectralint/releases/download/v0.5.0/spectralint-aarch64-apple-darwin.tar.xz"
-      sha256 "6d88f9e163041ffee342baff15809d1b7219594ffe4e576bf99f434e667b941e"
+      url "https://github.com/by-all-means/spectralint/releases/download/v0.7.2/spectralint-aarch64-apple-darwin.tar.xz"
+      sha256 "360a5a48b7472c8f60e5e02362300ae466cb1cbaeaba9106904e4b6a7bba7634"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/by-all-means/spectralint/releases/download/v0.5.0/spectralint-x86_64-apple-darwin.tar.xz"
-      sha256 "8aff6c7c1c0ec407d8c83244c150d60d9d3a5307d314cfdb16daf7b1893e8914"
+      url "https://github.com/by-all-means/spectralint/releases/download/v0.7.2/spectralint-x86_64-apple-darwin.tar.xz"
+      sha256 "b47ea2f1d912c2781373305bca5a9d86620b560677c8879b086da1c4f981b754"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/by-all-means/spectralint/releases/download/v0.5.0/spectralint-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "000dcc82073be79c3465ee7bda037bb1e8c11d8e38de993e11704a9d40176806"
+      url "https://github.com/by-all-means/spectralint/releases/download/v0.7.2/spectralint-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d34a024f76c40e20b77f560e843e9690d299d0879f9b32490a4fd148dc1680d5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/by-all-means/spectralint/releases/download/v0.5.0/spectralint-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a839ca2307d44c14903df66b7e5dad1fe246f3625f1d293bafd4df3736d674a1"
+      url "https://github.com/by-all-means/spectralint/releases/download/v0.7.2/spectralint-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "91a61f95f3c4322425fbb24689ff7f7b902373426ae45cdf660703e4e3bf38eb"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Spectralint < Formula
   end
 
   def install
-    bin.install "spectralint" if OS.mac? && Hardware::CPU.arm?
-    bin.install "spectralint" if OS.mac? && Hardware::CPU.intel?
-    bin.install "spectralint" if OS.linux? && Hardware::CPU.arm?
-    bin.install "spectralint" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "spectralint"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "spectralint"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "spectralint"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "spectralint"
+    end
 
     install_binary_aliases!
 
